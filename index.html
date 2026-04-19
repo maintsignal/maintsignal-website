@@ -215,7 +215,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <div class="logo">Maint<em>Signal</em></div>
   <div class="nr">
     <a href="#how">How It Works</a>
-    <a href="#method">Methodology</a>
+    <a href="#roi">ROI Calculator</a>
     <a href="#pricing">Pricing</a>
     <a href="#cta" class="btn bg">Free Assessment</a>
   </div>
@@ -313,6 +313,38 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   </div>
 </section>
 
+<!-- ROI CALCULATOR -->
+<div class="pricing-sec" id="roi" style="padding:5rem 2rem;">
+  <div class="pricing-inner">
+    <div class="sl ct sr">ROI Calculator</div>
+    <h2 class="st ct sr">Estimate your hidden downtime costs.</h2>
+    <p class="ss ct sr">Enter your numbers. See what bad data is costing you.</p>
+    <div style="max-width:600px;margin:2rem auto 0;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;">
+      <div style="margin-bottom:1.2rem;">
+        <label style="font-size:.85rem;color:var(--text2);display:block;margin-bottom:.4rem;">Work orders per year</label>
+        <input type="range" id="roi-wo" min="500" max="50000" value="5000" step="500" style="width:100%;accent-color:var(--g);" oninput="calcROI()">
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);"><span>500</span><span id="roi-wo-val" style="color:var(--g);font-family:var(--m);font-weight:700;">5,000</span><span>50,000</span></div>
+      </div>
+      <div style="margin-bottom:1.2rem;">
+        <label style="font-size:.85rem;color:var(--text2);display:block;margin-bottom:.4rem;">Estimated production value per hour ($)</label>
+        <input type="range" id="roi-pv" min="1000" max="100000" value="10000" step="1000" style="width:100%;accent-color:var(--g);" oninput="calcROI()">
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);"><span>$1K</span><span id="roi-pv-val" style="color:var(--g);font-family:var(--m);font-weight:700;">$10,000</span><span>$100K</span></div>
+      </div>
+      <div style="margin-bottom:1.2rem;">
+        <label style="font-size:.85rem;color:var(--text2);display:block;margin-bottom:.4rem;">Estimated % of failures that are repeats</label>
+        <input type="range" id="roi-rp" min="10" max="80" value="40" step="5" style="width:100%;accent-color:var(--g);" oninput="calcROI()">
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);"><span>10%</span><span id="roi-rp-val" style="color:var(--g);font-family:var(--m);font-weight:700;">40%</span><span>80%</span></div>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.5rem;background:var(--bg);border:1px solid var(--border);border-radius:10px;text-align:center;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.3rem;">Estimated hidden downtime cost per year</div>
+        <div id="roi-result" style="font-family:var(--m);font-size:2.4rem;font-weight:900;color:var(--r);">$2,400,000</div>
+        <div style="font-size:.78rem;color:var(--muted);margin-top:.5rem;">Based on industry average: 40% of failure codes missing, 6hrs avg downtime per repeat failure</div>
+        <a href="#cta" class="btn bg" style="margin-top:1rem;">See What You're Missing - Free</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- METHODOLOGY -->
 <section id="method">
   <div class="sl sr">Methodology</div>
@@ -361,7 +393,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
       <h3>Sample Assessment Report</h3>
       <p>2,000 synthetic work orders. General industrial facility. Every section included.</p>
       <div class="rc-tags"><span class="rt">Executive Summary</span><span class="rt">Data Quality</span><span class="rt">Top 10 Assets</span><span class="rt">AI Failure Analysis</span><span class="rt">Financial Impact</span><span class="rt">Recommendations</span></div>
-      <a href="mailto:mohammed.khan@maintsignal.com?subject=Sample%20Report%20Request&body=Please%20send%20me%20the%20sample%20assessment%20report.%0A%0ACompany%3A%20%0ARole%3A%20%0A%0AThanks" class="btn bg">Request Sample Report</a>
+      <a href="https://maintsignal.com/sample-report.pdf" target="_blank" class="btn bg">Download Sample Report</a>
     </div>
   </div>
 </section>
@@ -547,6 +579,19 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
 <script>
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+
+function calcROI(){
+  const wo=document.getElementById('roi-wo').value;
+  const pv=document.getElementById('roi-pv').value;
+  const rp=document.getElementById('roi-rp').value;
+  document.getElementById('roi-wo-val').textContent=Number(wo).toLocaleString();
+  document.getElementById('roi-pv-val').textContent='$'+Number(pv).toLocaleString();
+  document.getElementById('roi-rp-val').textContent=rp+'%';
+  const repeatWOs=wo*(rp/100);
+  const avgDowntime=6;
+  const hiddenCost=repeatWOs*avgDowntime*pv*0.4;
+  document.getElementById('roi-result').textContent='$'+Math.round(hiddenCost).toLocaleString();
+}
 
 function toggleChat(){
   const w=document.getElementById('chatWin'),b=document.getElementById('chatBtn');
