@@ -212,7 +212,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
 <body>
 
 <nav>
-  <a href="#" class="logo" style="text-decoration:none;">Maint<em>Signal</em></a>
+  <div class="logo">Maint<em>Signal</em></div>
   <div class="nr">
     <a href="#services">Services</a>
     <a href="#how">How It Works</a>
@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
     <a href="#about">About</a>
-    <a href="#cta">Contact</a>
+    <a href="mailto:mohammed.khan@maintsignal.com">Contact</a>
     <a href="#cta" class="btn bg">Pilot Assessment</a>
   </div>
 </nav>
@@ -270,7 +270,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
       <div style="text-align:center;"><div style="font-size:1.4rem;font-weight:900;color:var(--text);letter-spacing:-1px;">Limble</div><div style="font-size:.6rem;color:var(--muted);"></div></div>
       <div style="text-align:center;"><div style="font-size:1.4rem;font-weight:900;color:var(--text);letter-spacing:-1px;">Excel</div><div style="font-size:.6rem;color:var(--muted);">Spreadsheets</div></div>
     </div>
-    <div style="font-size:.75rem;color:var(--muted);margin-top:1rem;">We don't need API access. Just export your work order data as CSV, Excel, or PDF.</div>
+    <div style="font-size:.75rem;color:var(--muted);margin-top:1rem;">We don't need API access. Just export your work order data as CSV, Excel, PDF, JSON, or XML.</div>
   </div>
 
   <!-- EARLY-STAGE TRUST -->
@@ -318,12 +318,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
     <p class="ss ct">Our AI expands abbreviations, understands industry jargon across 5 sectors, and classifies with transparent confidence scores.</p>
     <div class="ai-grid">
       <div class="ai-row head"><div>Technician Wrote</div><div>AI Interpretation</div><div>Category</div><div>Confidence</div></div>
-      <div class="ai-row sr"><div class="ai-orig">"REPL mech seal P-101 lkg"</div><div class="ai-exp">Replaced mechanical seal on Pump P-101, leaking</div><div><span class="ai-cat" style="background:var(--rd);color:var(--r)">Seal Failure</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
-      <div class="ai-row sr"><div class="ai-orig">"BRG noise conv DE side"</div><div class="ai-exp">Bearing noise on conveyor, drive end</div><div><span class="ai-cat" style="background:var(--od);color:var(--o)">Bearing Failure</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
-      <div class="ai-row sr"><div class="ai-orig">"MTR tripped on O/L"</div><div class="ai-exp">Motor tripped on overload</div><div><span class="ai-cat" style="background:var(--bd);color:var(--b)">Motor Failure</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
-      <div class="ai-row sr"><div class="ai-orig">"CKT BKR tripped MCC reset"</div><div class="ai-exp">Circuit breaker tripped in motor control center, reset</div><div><span class="ai-cat" style="background:var(--bd);color:var(--b)">Electrical Fault</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
-      <div class="ai-row sr"><div class="ai-orig">"XMTR reading erratic recal"</div><div class="ai-exp">Transmitter reading erratic, recalibrated</div><div><span class="ai-cat" style="background:var(--gd);color:var(--g)">Instrumentation</span></div><div class="ai-conf" style="color:var(--o)">Medium</div></div>
-      <div class="ai-row sr"><div class="ai-orig">"fixed it"</div><div class="ai-exp">Insufficient detail for classification</div><div><span class="ai-cat" style="background:rgba(88,98,128,.08);color:var(--muted)">Unclassified</span></div><div class="ai-conf" style="color:var(--r)">Low</div></div>
+      <div class="ai-row"><div class="ai-orig">"REPL mech seal P-101 lkg"</div><div class="ai-exp">Replaced mechanical seal on Pump P-101, leaking</div><div><span class="ai-cat" style="background:var(--rd);color:var(--r)">Seal Failure</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
+      <div class="ai-row"><div class="ai-orig">"BRG noise conv DE side"</div><div class="ai-exp">Bearing noise on conveyor, drive end</div><div><span class="ai-cat" style="background:var(--od);color:var(--o)">Bearing Failure</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
+      <div class="ai-row"><div class="ai-orig">"MTR tripped on O/L"</div><div class="ai-exp">Motor tripped on overload</div><div><span class="ai-cat" style="background:var(--bd);color:var(--b)">Motor Failure</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
+      <div class="ai-row"><div class="ai-orig">"CKT BKR tripped MCC reset"</div><div class="ai-exp">Circuit breaker tripped in motor control center, reset</div><div><span class="ai-cat" style="background:var(--bd);color:var(--b)">Electrical Fault</span></div><div class="ai-conf" style="color:var(--g)">High</div></div>
+      <div class="ai-row"><div class="ai-orig">"XMTR reading erratic recal"</div><div class="ai-exp">Transmitter reading erratic, recalibrated</div><div><span class="ai-cat" style="background:var(--gd);color:var(--g)">Instrumentation</span></div><div class="ai-conf" style="color:var(--o)">Medium</div></div>
+      <div class="ai-row"><div class="ai-orig">"fixed it"</div><div class="ai-exp">Insufficient detail for classification</div><div><span class="ai-cat" style="background:rgba(88,98,128,.08);color:var(--muted)">Unclassified</span></div><div class="ai-conf" style="color:var(--r)">Low</div></div>
     </div>
     <p style="text-align:center;margin-top:1.8rem;font-size:.8rem;color:var(--muted)">200+ abbreviations. 5 industry taxonomies. ISO 14224 aligned. Every result includes a confidence score.</p>
   </div>
@@ -336,17 +336,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <p class="ss sr">We group our 11 analyses into three decision-ready pillars — each answering a different executive question.</p>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem;">
-    <div class="fc sr" style="border-top:3px solid var(--g);padding:2rem;">
+    <div class="fc" style="border-top:3px solid var(--g);padding:2rem;">
       <h3 style="color:var(--g);font-size:1.05rem;margin-bottom:.6rem;">Data Integrity</h3>
       <p style="font-size:.85rem;color:var(--text2);margin-bottom:.6rem;font-style:italic;">"Can we trust our maintenance data?"</p>
       <p style="font-size:.78rem;">Data Quality Scoring, Knowledge Capture, Failure Code Standardization, Column Mapping</p>
     </div>
-    <div class="fc sr" style="border-top:3px solid var(--o);padding:2rem;">
+    <div class="fc" style="border-top:3px solid var(--o);padding:2rem;">
       <h3 style="color:var(--o);font-size:1.05rem;margin-bottom:.6rem;">Failure Intelligence</h3>
       <p style="font-size:.85rem;color:var(--text2);margin-bottom:.6rem;font-style:italic;">"What keeps breaking and why?"</p>
       <p style="font-size:.78rem;">AI Failure Normalization, Top Problem Assets, Root Cause Correlation, Trend Analysis</p>
     </div>
-    <div class="fc sr" style="border-top:3px solid var(--r);padding:2rem;">
+    <div class="fc" style="border-top:3px solid var(--r);padding:2rem;">
       <h3 style="color:var(--r);font-size:1.05rem;margin-bottom:.6rem;">Financial & Compliance Risk</h3>
       <p style="font-size:.85rem;color:var(--text2);margin-bottom:.6rem;font-style:italic;">"What is this costing us? Are we audit-ready?"</p>
       <p style="font-size:.78rem;">Financial Impact, Compliance Audit, Benchmarking, Cost Intelligence, ROI Recommendations</p>
@@ -355,17 +355,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
 
   <div style="text-align:center;margin-bottom:1.5rem;"><div style="font-family:var(--m);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:2px;">All 11 analyses included in every assessment</div></div>
   <div class="fg">
-    <div class="fc sr"><div class="fc-i" style="background:var(--rd);color:var(--r)">1</div><h3>Data Quality Score</h3><p>Completeness, consistency, and usability scored field by field. See exactly where your data breaks down.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--od);color:var(--o)">2</div><h3>AI Failure Normalization</h3><p>Multi-signal AI classification with industry-specific few-shot learning. 200+ abbreviation expansion. Confidence scores on every result.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--gd);color:var(--g)">3</div><h3>Financial Impact</h3><p>Downtime hours converted to dollars. Which failures cost the most, with stated assumptions.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--bd);color:var(--b)">4</div><h3>Top Problem Assets</h3><p>Equipment ranked by downtime, failure count, and MTTR. A prioritized action list.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:rgba(168,85,247,.07);color:#a855f7">5</div><h3>Recommendations</h3><p>Specific actions ranked by impact and ROI. "Fix this code." "Investigate this pump." "This PM isn't working."</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--rd);color:var(--r)">6</div><h3>Compliance Audit</h3><p>Gap analysis against FDA 21 CFR Part 11, ISO 55001, IATF 16949, FSMA, and OSHA PSM. Know where you'd fail before the auditor arrives.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--od);color:var(--o)">7</div><h3>Trend Analysis</h3><p>Monthly failure patterns, seasonal spikes, deteriorating assets, and data quality trends over time.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--gd);color:var(--g)">8</div><h3>Knowledge Capture</h3><p>Auto-generated failure code library customized to your facility. Abbreviation dictionary. Technician quick-reference cards.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--bd);color:var(--b)">9</div><h3>Root Cause Correlation</h3><p>Hidden failure chains - which failures trigger other failures. Chronic repeat patterns. Cascade analysis.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:rgba(168,85,247,.07);color:#a855f7">10</div><h3>Industry Benchmarking</h3><p>Compare your metrics against industry peers. See where you're world-class and where you're falling behind.</p></div>
-    <div class="fc sr"><div class="fc-i" style="background:var(--rd);color:var(--r)">11</div><h3>Cost Intelligence</h3><p>Emergency vs planned spend. Top cost drivers. Repeat repair waste. Optimization opportunities with savings estimates.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--rd);color:var(--r)">1</div><h3>Data Quality Score</h3><p>Completeness, consistency, and usability scored field by field. See exactly where your data breaks down.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--od);color:var(--o)">2</div><h3>AI Failure Normalization</h3><p>Multi-signal AI classification with industry-specific few-shot learning. 200+ abbreviation expansion. Confidence scores on every result.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--gd);color:var(--g)">3</div><h3>Financial Impact</h3><p>Downtime hours converted to dollars. Which failures cost the most, with stated assumptions.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--bd);color:var(--b)">4</div><h3>Top Problem Assets</h3><p>Equipment ranked by downtime, failure count, and MTTR. A prioritized action list.</p></div>
+    <div class="fc"><div class="fc-i" style="background:rgba(168,85,247,.07);color:#a855f7">5</div><h3>Recommendations</h3><p>Specific actions ranked by impact and ROI. "Fix this code." "Investigate this pump." "This PM isn't working."</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--rd);color:var(--r)">6</div><h3>Compliance Audit</h3><p>Gap analysis against FDA 21 CFR Part 11, ISO 55001, IATF 16949, FSMA, and OSHA PSM. Know where you'd fail before the auditor arrives.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--od);color:var(--o)">7</div><h3>Trend Analysis</h3><p>Monthly failure patterns, seasonal spikes, deteriorating assets, and data quality trends over time.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--gd);color:var(--g)">8</div><h3>Knowledge Capture</h3><p>Auto-generated failure code library customized to your facility. Abbreviation dictionary. Technician quick-reference cards.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--bd);color:var(--b)">9</div><h3>Root Cause Correlation</h3><p>Hidden failure chains - which failures trigger other failures. Chronic repeat patterns. Cascade analysis.</p></div>
+    <div class="fc"><div class="fc-i" style="background:rgba(168,85,247,.07);color:#a855f7">10</div><h3>Industry Benchmarking</h3><p>Compare your metrics against industry peers. See where you're world-class and where you're falling behind.</p></div>
+    <div class="fc"><div class="fc-i" style="background:var(--rd);color:var(--r)">11</div><h3>Cost Intelligence</h3><p>Emergency vs planned spend. Top cost drivers. Repeat repair waste. Optimization opportunities with savings estimates.</p></div>
   </div>
 </section>
 
@@ -403,8 +403,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <div class="sl sr">Who This Is For</div>
   <h2 class="st sr">Built for teams with messy data and blind spots.</h2>
   <div class="for-grid">
-    <div class="for-card sr"><h4><span style="color:var(--g)">Yes</span> - Great fit if:</h4><p>You have 1,000+ work orders but don't trust the failure reports. Your technicians write free-text descriptions with no standardization. You need data to justify maintenance budgets to leadership. You're preparing for an audit (IATF, ISO, FDA, FSMA). You manage multiple sites and can't compare them.</p></div>
-    <div class="for-card sr"><h4><span style="color:var(--r)">No</span> - Not a fit if:</h4><p>Your maintenance data is already clean with standardized failure codes. You have fewer than 500 work orders. You're looking for a replacement system (we layer on top, not replace). You need real-time IoT sensor monitoring (that's a different product).</p></div>
+    <div class="for-card"><h4><span style="color:var(--g)">Yes</span> - Great fit if:</h4><p>You have 1,000+ work orders but don't trust the failure reports. Your technicians write free-text descriptions with no standardization. You need data to justify maintenance budgets to leadership. You're preparing for an audit (IATF, ISO, FDA, FSMA). You manage multiple sites and can't compare them.</p></div>
+    <div class="for-card"><h4><span style="color:var(--r)">No</span> - Not a fit if:</h4><p>Your maintenance data is already clean with standardized failure codes. You have fewer than 500 work orders. You're looking for a replacement system (we layer on top, not replace). You need real-time IoT sensor monitoring (that's a different product).</p></div>
   </div>
 
   <!-- WHO BUYS THIS -->
@@ -459,13 +459,13 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <h2 class="st sr">No black boxes. Here's how we calculate everything.</h2>
   <p class="ss sr">Transparent enough for your reliability engineer to defend to leadership.</p>
   <div class="mg">
-    <div class="mc sr"><div class="mc-n">Data Quality</div><h4>Weighted scoring across three dimensions</h4><p>40% completeness (critical fields filled), 30% consistency (date logic, duplicates, format), 30% usability (generic codes like "Other" flagged). Every field scored individually.</p></div>
-    <div class="mc sr"><div class="mc-n">AI Normalization</div><h4>Abbreviation dictionary + LLM classification</h4><p>200+ term expansion layer, then industry-specific LLM prompt (ISO 14224, GMP, FSMA context), then confidence scoring. Low-confidence results flagged, not guessed. Raw mapping provided for spot-checking.</p></div>
-    <div class="mc sr"><div class="mc-n">Downtime</div><h4>Calculated from timestamps, estimated when missing</h4><p>Malfunction end minus start = downtime. When timestamps are missing, estimated from created-to-completed time. Every estimate labeled. MTTR and MTBF calculated per asset.</p></div>
-    <div class="mc sr"><div class="mc-n">Financial Impact</div><h4>Your production value times our downtime hours</h4><p>You provide production $/hour (or we use industry defaults). Loss = downtime x rate. Every assumption stated in the report. Purpose: frame failures in business terms.</p></div>
-    <div class="mc sr"><div class="mc-n">Compliance</div><h4>Audit gap analysis against 5 frameworks</h4><p>FDA 21 CFR Part 11, ISO 55001, IATF 16949, FSMA, OSHA PSM. Each required field checked. Pass/warn/fail per field. Prioritized remediation actions generated.</p></div>
-    <div class="mc sr"><div class="mc-n">Root Cause</div><h4>Failure chain and correlation analysis</h4><p>Detects when failure A consistently triggers failure B. Identifies chronic repeat failures. Finds co-occurring failures suggesting shared root cause. Calculates cascade rates.</p></div>
-    <div class="mc sr"><div class="mc-n">Benchmarking</div><h4>Compare against industry peer averages</h4><p>PM ratio, MTTR, failure code usage, cost per work order, reactive %. Rated as world-class, above average, below average, or critical gap. Sources cited.</p></div>
+    <div class="mc"><div class="mc-n">Data Quality</div><h4>Weighted scoring across three dimensions</h4><p>40% completeness (critical fields filled), 30% consistency (date logic, duplicates, format), 30% usability (generic codes like "Other" flagged). Every field scored individually.</p></div>
+    <div class="mc"><div class="mc-n">AI Normalization</div><h4>Abbreviation dictionary + LLM classification</h4><p>200+ term expansion layer, then industry-specific LLM prompt (ISO 14224, GMP, FSMA context), then confidence scoring. Low-confidence results flagged, not guessed. Raw mapping provided for spot-checking.</p></div>
+    <div class="mc"><div class="mc-n">Downtime</div><h4>Calculated from timestamps, estimated when missing</h4><p>Malfunction end minus start = downtime. When timestamps are missing, estimated from created-to-completed time. Every estimate labeled. MTTR and MTBF calculated per asset.</p></div>
+    <div class="mc"><div class="mc-n">Financial Impact</div><h4>Your production value times our downtime hours</h4><p>You provide production $/hour (or we use industry defaults). Loss = downtime x rate. Every assumption stated in the report. Purpose: frame failures in business terms.</p></div>
+    <div class="mc"><div class="mc-n">Compliance</div><h4>Audit gap analysis against 5 frameworks</h4><p>FDA 21 CFR Part 11, ISO 55001, IATF 16949, FSMA, OSHA PSM. Each required field checked. Pass/warn/fail per field. Prioritized remediation actions generated.</p></div>
+    <div class="mc"><div class="mc-n">Root Cause</div><h4>Failure chain and correlation analysis</h4><p>Detects when failure A consistently triggers failure B. Identifies chronic repeat failures. Finds co-occurring failures suggesting shared root cause. Calculates cascade rates.</p></div>
+    <div class="mc"><div class="mc-n">Benchmarking</div><h4>Compare against industry peer averages</h4><p>PM ratio, MTTR, failure code usage, cost per work order, reactive %. Rated as world-class, above average, below average, or critical gap. Sources cited.</p></div>
   </div>
 </section>
 
@@ -475,10 +475,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <h2 class="st ct sr">Four steps. Zero disruption.</h2>
   <p class="ss ct sr">No integration. No IT. No system access. We work entirely outside your environment.</p>
   <div class="pg">
-    <div class="pc sr"><div class="pc-n">01</div><h4>Export</h4><p>Pull work order history from your system. CSV, Excel, or PDF. Takes 10 minutes.</p></div>
-    <div class="pc sr"><div class="pc-n">02</div><h4>Send</h4><p>Upload via our secure portal or email directly. NDA signed first.</p></div>
-    <div class="pc sr"><div class="pc-n">03</div><h4>Analyze</h4><p>We auto-map your columns and run all eleven analyses. 48 hours.</p></div>
-    <div class="pc sr"><div class="pc-n">04</div><h4>Review</h4><p>Full report delivered. Optional walkthrough call if you want one.</p></div>
+    <div class="pc"><div class="pc-n">01</div><h4>Export</h4><p>Pull work order history from your system. CSV, Excel, PDF, JSON, or XML. Takes 10 minutes.</p></div>
+    <div class="pc"><div class="pc-n">02</div><h4>Send</h4><p>Upload via our secure portal or email directly. NDA signed first.</p></div>
+    <div class="pc"><div class="pc-n">03</div><h4>Analyze</h4><p>We auto-map your columns and run all eleven analyses. 48 hours.</p></div>
+    <div class="pc"><div class="pc-n">04</div><h4>Review</h4><p>Full report delivered. Optional walkthrough call if you want one.</p></div>
   </div>
 
   <!-- WHAT HAPPENS AFTER YOU CLICK -->
@@ -557,7 +557,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
     <h2 class="st ct sr">Simple pricing. No surprises.</h2>
     <p class="ss ct sr">Start free. Scale when you see value.</p>
     <div class="pricing-grid">
-      <div class="price-card sr">
+      <div class="price-card">
         <div class="price-name">Pilot Assessment</div>
         <div class="price-amount">$0 <span style="font-size:.7rem;text-decoration:line-through;color:var(--muted);">$1,500</span></div>
         <div class="price-desc">Limited pilot program. Full assessment at no cost for early partners. Value: $1,500.</div>
@@ -569,7 +569,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
           <li>48-hour turnaround</li>
         </ul>
       </div>
-      <div class="price-card featured sr">
+      <div class="price-card featured">
         <div class="price-name">Quarterly Intelligence</div>
         <div class="price-amount">$5,000<span>/quarter</span></div>
         <div class="price-desc">Recurring assessments every 90 days with trend comparison and improvement tracking.</div>
@@ -582,7 +582,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
           <li>Updated recommendations each cycle</li>
         </ul>
       </div>
-      <div class="price-card sr">
+      <div class="price-card">
         <div class="price-name">Multi-Site</div>
         <div class="price-amount">Custom</div>
         <div class="price-desc">Cross-site benchmarking for operations teams managing 3+ facilities.</div>
@@ -618,7 +618,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
     <h2 class="st ct sr">Generic AI vs MaintSignal</h2>
     <p class="ss ct sr">Public LLMs don't come with maintenance schema, abbreviation dictionaries, benchmark baselines, or audit logic.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;">
-      <div class="fc sr" style="border-top:2px solid var(--muted);">
+      <div class="fc" style="border-top:2px solid var(--muted);">
         <h3 style="color:var(--muted);margin-bottom:.8rem;">Generic AI (ChatGPT, etc.)</h3>
         <div style="font-size:.82rem;color:var(--muted);line-height:1.8;">
           <div>✗ No maintenance abbreviation dictionary</div>
@@ -631,7 +631,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
           <div>✗ Must re-prompt every time</div>
         </div>
       </div>
-      <div class="fc sr" style="border-top:2px solid var(--g);">
+      <div class="fc" style="border-top:2px solid var(--g);">
         <h3 style="color:var(--g);margin-bottom:.8rem;">MaintSignal</h3>
         <div style="font-size:.82rem;color:var(--text2);line-height:1.8;">
           <div>✓ 200+ maintenance abbreviation expansion</div>
@@ -653,7 +653,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <div class="sl sr">Questions</div>
   <h2 class="st sr">Frequently asked.</h2>
   <div class="faq-grid">
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What file formats do you accept?</div><div class="faq-a"><p>CSV, Excel (.xlsx, .xls), and PDF. Any export from any system works - SAP, Maximo, Oracle, MaintainX, UpKeep, Fiix, Limble, or even manual spreadsheets. We auto-detect and map your columns.</p></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What file formats do you accept?</div><div class="faq-a"><p>CSV, Excel (.xlsx, .xls), PDF, JSON, and XML. Any export from any system works - SAP, Maximo, Oracle, MaintainX, UpKeep, Fiix, Limble, or even manual spreadsheets. We auto-detect and map your columns.</p></div></div>
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">How do I send my data securely?</div><div class="faq-a"><p>After signing the NDA, you can email the file directly to us, upload via our secure link, or use SFTP for larger files. We provide the secure transfer method that works best for your IT requirements.</p></div></div>
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Is the pilot assessment really free? What's the catch?</div><div class="faq-a"><p>Yes. Pilot partners receive the full 11-module assessment at zero cost. No credit card, no commitment. We offer this because the report demonstrates its own value - once you see your data quality score and hidden patterns, most teams want quarterly monitoring.</p></div></div>
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What data fields do you need?</div><div class="faq-a"><p>At minimum: work order ID, equipment/asset ID, date, and description. Ideal exports also include failure codes, cause codes, timestamps, labor hours, and cost. The more fields, the deeper the analysis - but we work with whatever you have.</p></div></div>
@@ -668,17 +668,17 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <h2 class="st ct sr">We don't replace your system. We make it useful.</h2>
   <p class="ss ct sr">Most tools are either a System of Record (SAP, Maximo) or a System of Action (MaintainX, UpKeep). MaintSignal is neither. We're the intelligence layer that sits on top.</p>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;">
-    <div class="fc sr" style="text-align:center;border-top:2px solid var(--muted);">
+    <div class="fc" style="text-align:center;border-top:2px solid var(--muted);">
       <h3 style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem;">Systems of Record</h3>
       <p style="font-size:.78rem;">SAP, Maximo, Oracle EAM</p>
       <p style="font-size:.72rem;color:var(--muted);margin-top:.3rem;">Store the data. Don't analyze it.</p>
     </div>
-    <div class="fc sr" style="text-align:center;border-top:2px solid var(--g);">
+    <div class="fc" style="text-align:center;border-top:2px solid var(--g);">
       <h3 style="color:var(--g);font-size:.85rem;margin-bottom:.5rem;">System of Intelligence</h3>
       <p style="font-size:.78rem;">MaintSignal</p>
       <p style="font-size:.72rem;color:var(--muted);margin-top:.3rem;">Analyzes any data from any system. Finds what's hidden.</p>
     </div>
-    <div class="fc sr" style="text-align:center;border-top:2px solid var(--muted);">
+    <div class="fc" style="text-align:center;border-top:2px solid var(--muted);">
       <h3 style="color:var(--muted);font-size:.85rem;margin-bottom:.5rem;">Systems of Action</h3>
       <p style="font-size:.78rem;">MaintainX, UpKeep, Fiix</p>
       <p style="font-size:.72rem;color:var(--muted);margin-top:.3rem;">Execute work. Need clean data to work well.</p>
@@ -758,6 +758,29 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" style="padding:4rem 2rem;background:var(--bg2);border-top:1px solid var(--border);">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <div class="sl ct">Contact</div>
+    <h2 class="st ct">Get in touch.</h2>
+    <p class="ss ct">Questions about MaintSignal? Want to discuss your data challenges? Reach out directly.</p>
+    <div style="display:flex;justify-content:center;gap:2rem;margin-top:2rem;flex-wrap:wrap;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 2rem;text-align:center;min-width:200px;">
+        <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">Email</div>
+        <a href="mailto:mohammed.khan@maintsignal.com" style="color:var(--g);text-decoration:none;font-size:.9rem;">mohammed.khan@maintsignal.com</a>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 2rem;text-align:center;min-width:200px;">
+        <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">Response Time</div>
+        <div style="color:var(--text);font-size:.9rem;">Within 24 hours</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 2rem;text-align:center;min-width:200px;">
+        <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">Pilot Assessment</div>
+        <a href="#cta" style="color:var(--g);text-decoration:none;font-size:.9rem;">Apply here</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
@@ -771,9 +794,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 MaintSignal. All rights reserved.</span>
+    <span>&copy; 2026 MaintSignal LLC. All rights reserved.</span>
     <div>
-      <a href="#cta">Contact</a>
+      <a href="mailto:mohammed.khan@maintsignal.com">Contact</a>
       <a href="#faq">FAQ</a>
     </div>
   </div>
@@ -897,10 +920,10 @@ function getReply(q){
     return "Simple! You export work order history from your maintenance system (CSV, Excel, or PDF), send it to us, and we deliver a full intelligence report within 48 hours. No software to install, no system access needed. <a href='#how'>See the full process</a>";
 
   if(l.includes('format') || l.includes('file') || l.includes('csv') || l.includes('excel') || l.includes('accept'))
-    return "We accept CSV, Excel (.xlsx, .xls), and PDF files. Any export from any maintenance system works - SAP, Maximo, Oracle, MaintainX, UpKeep, Fiix, Limble, or even manual spreadsheets. We auto-detect and map your columns.";
+    return "We accept CSV, Excel (.xlsx, .xls), PDF, JSON, and XML files. Any export from any maintenance system works - SAP, Maximo, Oracle, MaintainX, UpKeep, Fiix, Limble, or even manual spreadsheets. We auto-detect and map your columns.";
 
   if(l.includes('free') || l.includes('cost') || l.includes('price') || l.includes('pricing') || l.includes('pay'))
-    return "Your first assessment is completely free. No credit card, no commitment. You get the full 11-module analysis, PDF + Excel report, and an optional walkthrough call. After that, quarterly monitoring starts at $1,500/month. <a href='#pricing'>See pricing</a>";
+    return "Your first assessment is completely free. No credit card, no commitment. You get the full 11-module analysis, PDF + Excel report, and an optional walkthrough call. After that, quarterly intelligence is $5,000/quarter. <a href='#pricing'>See pricing</a>";
 
   if(l.includes('secure') || l.includes('safe') || l.includes('nda') || l.includes('confid') || l.includes('privacy') || l.includes('data prot'))
     return "We take security seriously. Mutual NDA signed before any data exchange. Files encrypted with TLS 1.3 in transit and AES-256 at rest. All data permanently deleted within 30 days. Your data is never used for AI model training. <a href='#security'>See security details</a>";
