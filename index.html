@@ -863,30 +863,50 @@ const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isInters
 document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
 
 function submitForm(){
-  const name=document.getElementById('form-name').value.trim();
-  const email=document.getElementById('form-email').value.trim();
-  const company=document.getElementById('form-company').value.trim();
-  const system=document.getElementById('form-system').value;
-  const volume=document.getElementById('form-volume').value;
-  const msg=document.getElementById('form-msg');
-  const btn=document.querySelector('#cta button');
+  var name=document.getElementById('form-name').value.trim();
+  var email=document.getElementById('form-email').value.trim();
+  var company=document.getElementById('form-company').value.trim();
+  var system=document.getElementById('form-system').value;
+  var volume=document.getElementById('form-volume').value;
+  var msg=document.getElementById('form-msg');
+  var btn=document.querySelector('#cta button');
 
   if(!name||!email||!company){
     msg.style.display='block';msg.style.color='var(--r)';
     msg.textContent='Please fill in your name, email, and company.';return;
   }
+  if(email.indexOf('@')<1||email.indexOf('.')<3){
+    msg.style.display='block';msg.style.color='var(--r)';
+    msg.textContent='Please enter a valid work email address.';return;
+  }
 
-  const subject=encodeURIComponent('Pilot Assessment Request - '+company);
-  const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nCompany: '+company+'\nSystem: '+system+'\nVolume: '+volume);
-  window.location.href='mailto:mohammed.khan@maintsignal.com?subject='+subject+'&body='+body;
+  btn.disabled=true;btn.style.opacity='0.5';btn.style.cursor='not-allowed';
+  btn.textContent='Submitting...';
 
-  // Disable button and show confirmation
-  btn.disabled=true;
-  btn.style.opacity='0.5';
-  btn.style.cursor='not-allowed';
-  btn.textContent='Request Submitted';
-  msg.style.display='block';
-  msg.innerHTML='<div style="background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.2);border-radius:10px;padding:1.2rem;margin-top:1rem;text-align:center;"><div style="font-size:1.1rem;color:var(--g);font-weight:700;margin-bottom:.5rem;">Request Received</div><div style="font-size:.85rem;color:var(--text2);line-height:1.6;">Thank you, '+name+'. Mohammed Khan will review your request and respond within 24 hours.<br>Check your email for next steps.</div><div style="font-size:.75rem;color:var(--muted);margin-top:.8rem;">If your email client did not open, send your request directly to mohammed.khan@maintsignal.com</div></div>';
+  fetch('https://formspree.io/f/xgorrpdn',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({name:name,email:email,company:company,system:system,volume:volume})
+  }).then(function(r){
+    if(r.ok){
+      btn.textContent='Request Submitted';
+      msg.style.display='block';
+      msg.innerHTML='<div style="background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.2);border-radius:10px;padding:1.2rem;margin-top:1rem;text-align:center;"><div style="font-size:1.1rem;color:var(--g);font-weight:700;margin-bottom:.5rem;">Pilot Request Received</div><div style="font-size:.85rem;color:var(--text2);line-height:1.6;">Thank you, '+name+'. Your request has been submitted successfully.<br>Mohammed Khan will review and respond within 24 hours.<br><strong style="color:var(--g);">Check your email for an instant confirmation.</strong></div></div>';
+      document.getElementById('form-name').disabled=true;
+      document.getElementById('form-email').disabled=true;
+      document.getElementById('form-company').disabled=true;
+      document.getElementById('form-system').disabled=true;
+      document.getElementById('form-volume').disabled=true;
+    }else{
+      btn.textContent='Request Pilot Assessment';btn.disabled=false;btn.style.opacity='1';btn.style.cursor='pointer';
+      msg.style.display='block';msg.style.color='var(--r)';
+      msg.textContent='Something went wrong. Please email mohammed.khan@maintsignal.com directly.';
+    }
+  }).catch(function(){
+    btn.textContent='Request Pilot Assessment';btn.disabled=false;btn.style.opacity='1';btn.style.cursor='pointer';
+    msg.style.display='block';msg.style.color='var(--r)';
+    msg.textContent='Connection error. Please email mohammed.khan@maintsignal.com directly.';
+  });
 }
 
 function calcROI(){
