@@ -416,7 +416,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
       <span style="padding:.4rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.82rem;color:var(--text2);">Plant Managers</span>
       <span style="padding:.4rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.82rem;color:var(--text2);">VP Operations</span>
       <span style="padding:.4rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.82rem;color:var(--text2);">Asset Managers</span>
-      <span style="padding:.4rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.82rem;color:var(--text2);">Operations Excellence</span>
+      <span style="padding:.4rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.82rem;color:var(--text2);">Compliance & Quality Leaders</span>
     </div>
   </div>
 </section>
@@ -570,12 +570,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
         </ul>
       </div>
       <div class="price-card featured">
-        <div class="price-name">Quarterly Intelligence</div>
-        <div class="price-amount">$5,000<span>/quarter</span></div>
-        <div class="price-desc">Recurring assessments every 90 days with trend comparison and improvement tracking.</div>
+        <div class="price-name">Monthly Intelligence</div>
+        <div class="price-amount">$1,499<span>/month</span></div>
+        <div class="price-desc">Monthly intelligence reports with trend comparison and improvement tracking.</div>
         <ul class="price-features">
           <li>Everything in Pilot, plus:</li>
-          <li>Quarter-over-quarter trending</li>
+          <li>Month-over-month trending</li>
           <li>Data quality improvement tracking</li>
           <li>Deteriorating asset alerts</li>
           <li>Priority support</li>
@@ -587,7 +587,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
         <div class="price-amount">Custom</div>
         <div class="price-desc">Cross-site benchmarking for operations teams managing 3+ facilities.</div>
         <ul class="price-features">
-          <li>Everything in Quarterly, plus:</li>
+          <li>Everything in Pilot, plus:</li>
           <li>Cross-site comparison dashboard</li>
           <li>Standardized failure taxonomy</li>
           <li>Executive-level reporting</li>
@@ -655,10 +655,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 2rem;max-width:1100px;m
   <div class="faq-grid">
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What file formats do you accept?</div><div class="faq-a"><p>CSV, Excel (.xlsx, .xls), PDF, JSON, and XML. Any export from any system works - SAP, Maximo, Oracle, MaintainX, UpKeep, Fiix, Limble, or even manual spreadsheets. We auto-detect and map your columns.</p></div></div>
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">How do I send my data securely?</div><div class="faq-a"><p>After signing the NDA, you can email the file directly to us, upload via our secure link, or use SFTP for larger files. We provide the secure transfer method that works best for your IT requirements.</p></div></div>
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Is the pilot assessment really free? What's the catch?</div><div class="faq-a"><p>Yes. Pilot partners receive the full 11-module assessment at zero cost. No credit card, no commitment. We offer this because the report demonstrates its own value - once you see your data quality score and hidden patterns, most teams want quarterly monitoring.</p></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Is the pilot assessment really free? What's the catch?</div><div class="faq-a"><p>Yes. Pilot partners receive the full 11-module assessment at zero cost. No credit card, no commitment. We offer this because the report demonstrates its own value - once you see your data quality score and hidden patterns, most teams want monthly monitoring.</p></div></div>
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What data fields do you need?</div><div class="faq-a"><p>At minimum: work order ID, equipment/asset ID, date, and description. Ideal exports also include failure codes, cause codes, timestamps, labor hours, and cost. The more fields, the deeper the analysis - but we work with whatever you have.</p></div></div>
     <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">Does your AI access our raw data for training?</div><div class="faq-a"><p>No. Your data is never used for model training. AI classification happens on isolated, US-hosted infrastructure. Raw data is deleted within 30 days of report delivery. This is in the NDA.</p></div></div>
-    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What happens after the pilot assessment?</div><div class="faq-a"><p>You decide. If the findings are valuable, we offer quarterly intelligence ($5,000/quarter) for ongoing trend tracking. If not, you keep the report and owe nothing. No pressure, no follow-up calls unless you want them.</p></div></div>
+    <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q">What happens after the pilot assessment?</div><div class="faq-a"><p>You decide. If the findings are valuable, we offer monthly intelligence ($1,499/month) for ongoing trend tracking. If not, you keep the report and owe nothing. No pressure, no follow-up calls unless you want them.</p></div></div>
   </div>
 </section>
 
@@ -949,7 +949,7 @@ function getReply(q){
     return "We accept CSV, Excel (.xlsx, .xls), PDF, JSON, and XML files. Any export from any maintenance system works - SAP, Maximo, Oracle, MaintainX, UpKeep, Fiix, Limble, or even manual spreadsheets. We auto-detect and map your columns.";
 
   if(l.includes('free') || l.includes('cost') || l.includes('price') || l.includes('pricing') || l.includes('pay'))
-    return "Your first assessment is completely free. No credit card, no commitment. You get the full 11-module analysis, PDF + Excel report, and an optional walkthrough call. After that, quarterly intelligence is $5,000/quarter. <a href='#pricing'>See pricing</a>";
+    return "Your first assessment is completely free. No credit card, no commitment. You get the full 11-module analysis, PDF + Excel report, and an optional walkthrough call. After that, monthly intelligence is $1,499/month. <a href='#pricing'>See pricing</a>";
 
   if(l.includes('secure') || l.includes('safe') || l.includes('nda') || l.includes('confid') || l.includes('privacy') || l.includes('data prot'))
     return "We take security seriously. Mutual NDA signed before any data exchange. Files encrypted with TLS 1.3 in transit and AES-256 at rest. All data permanently deleted within 30 days. Your data is never used for AI model training. <a href='#security'>See security details</a>";
